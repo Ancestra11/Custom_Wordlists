@@ -1,10 +1,4 @@
-Phillibert
-Amandine
-Huguette
-Lyon
+philibert
 69
-38
-Grenoble
-Pétanque
-Jean-Marie Bigard
-Architecte
+petanque
+Jean-Marie
