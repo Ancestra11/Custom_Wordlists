@@ -1,4 +1,5 @@
-print("Saisir un mot servant pour le dictionnaire de mots de passe (0 = STOP) : ")
+print("Saisir un mot servant pour le dictionnaire de mots de passe")
+print("(0 = STOP) : ")
 
 class Ecrivain() :
     def __init__(self):
@@ -13,7 +14,8 @@ class Ecrivain() :
             self.potentiel.append(ajouts)
 
             if ajouts == '0' :
-                confirm = input("\nStopper la saisie ? Ou ajouter '0' dans le dictionnaire ? \n(S = Stop, A = Ajout, R = Retour) : ")
+                print("\nStopper la saisie ? Ou ajouter '0' dans le dictionnaire ?")
+                confirm = input("S = Stop, A = Ajout, R = Retour) : ")
                 self.Arret(confirm)
 
 
@@ -36,6 +38,6 @@ class Ecrivain() :
             for items in self.potentiel :
                 Fichier.write('%s\n' %items)
 
-main = Ecrivain()
-main.Collecte()
-main.Ecriture()
+#main = Ecrivain()
+#main.Collecte()
+#main.Ecriture()
