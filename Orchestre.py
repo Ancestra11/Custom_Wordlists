@@ -1,4 +1,4 @@
-import Ecrivain
+import Ecrivain, Chimiste
 
 def main() :
     Ecri = Ecrivain.Ecrivain()

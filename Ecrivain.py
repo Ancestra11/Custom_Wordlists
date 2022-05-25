@@ -7,37 +7,36 @@ class Ecrivain() :
         self.potentiel = []
 
     def Collecte(self) :
-        #continuer = True
 
         while self.continuer :
-            ajouts = input()
-            self.potentiel.append(ajouts)
+            self.ajouts = input()
+            self.potentiel.append(self.ajouts)
 
-            if ajouts == '0' :
+            if self.ajouts == '0' :
                 print("\nStopper la saisie ? Ou ajouter '0' dans le dictionnaire ?")
-                confirm = input("S = Stop, A = Ajout, R = Retour) : ")
-                self.Arret(confirm)
+                self.confirm = input("S = Stop, A = Ajout, R = Retour) : ")
+                self.Arret(self.confirm)
 
 
     def Arret(self, confirm) :
-        if confirm.upper() == 'S' :
+        if self.confirm.upper() == 'S' :
             self.potentiel.pop()
             self.continuer = False
-        elif confirm.upper() == 'A' :
-            self.potentiel.append(ajouts)
-        elif confirm.upper() == 'R' :
+        elif self.confirm.upper() == 'A' :
             pass
+        elif self.confirm.upper() == 'R' :
+            self.potentiel.pop()
         else :
-            Arret(confirm)
+            Arret(self.confirm)
         return self.continuer
         
     def Ecriture(self) :
-        NomFichier = input("\nQuel nom donner au fichier ? ")
+        print("\nNom par défaut = 'Exemple.txt' ") 
+        NomFichier = input("Donner un autre nom au fichier ? : ")
+
+        if NomFichier == "" :
+            NomFichier = "Exemple.txt"
 
         with open(NomFichier, 'w') as Fichier :
             for items in self.potentiel :
                 Fichier.write('%s\n' %items)
-
-#main = Ecrivain()
-#main.Collecte()
-#main.Ecriture()
