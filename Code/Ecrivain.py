@@ -19,17 +19,21 @@ class Ecrivain() :
 
 
     def Arret(self, confirm) :
-        if self.confirm.upper() == 'S' :
-            self.potentiel.pop()
-            self.continuer = False
-        elif self.confirm.upper() == 'A' :
-            pass
-        elif self.confirm.upper() == 'R' :
-            self.potentiel.pop()
-        else :
-            Arret(self.confirm)
+        #SaisieUtilisateur = True
+        while SaisieUtilisateur :
+            #SaisieUtilisateur = False
+            if self.confirm.upper() == 'S' :
+                self.potentiel.pop()
+                self.continuer = False
+            elif self.confirm.upper() == 'A' :
+                pass
+            elif self.confirm.upper() == 'R' :
+                self.potentiel.pop()
+            #else :
+                #SaisieUtilisateur = True
         return self.continuer
         
+
     def Ecriture(self) :
         print("\nNom par défaut = 'Exemple.txt' ") 
         NomFichier = input("Donner un autre nom au fichier ? : ")
@@ -40,3 +44,6 @@ class Ecrivain() :
         with open(NomFichier, 'w') as Fichier :
             for items in self.potentiel :
                 Fichier.write('%s\n' %items)
+
+    def getPotentiel(self) :
+        return self.potentiel
