@@ -1,7 +1,8 @@
 # Custom_Wordlists
 Générateur personnalisé de dictionnaires de mot de passe.
+Pour lancer le programme, lancez le fichier 'Orchestre.py'.
 
-Ceci est un projet lié à la cybersécurité utilisant l'ingénierie sociale, l'OSINT et Python afin de créer une liste de mots de passe potentiels de la cible.
+Ceci est un projet lié à la cybersécurité utilisant l'OSINT et Python afin de créer une liste de mots de passe potentiels de la cible.
 
 Ma cible sera une personne imaginaire du nom de Phillibert Woufwoufman. Phillibert est né le 17 Mars 1970 dans la ville de Lyon (code postal 69000 et quelques). Ce dernier vit aujourd'hui dans la ville de Grenoble (code postal 38000 - 38100) avec sa femme (Huguette) et ses 2 enfants (Jean-Mouloud et Amandine).
 
