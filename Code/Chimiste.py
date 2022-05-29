@@ -1,3 +1,5 @@
+import re
+
 class Chimiste() :
 	def __init__(self, potentiel) :
 		self.potentiel = potentiel
