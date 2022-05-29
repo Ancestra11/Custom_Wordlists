@@ -1,3 +1,4 @@
+# S'occupe de la création des MDP potentiels avec les saisies utilisateurs.
 import re
 
 class Chimiste() :
