@@ -7,9 +7,11 @@ Chimi = Chimiste.Chimiste(Ecri.getPotentiel())
 def LE_PATRON() :
     
     Ecri.Collecte()
-    Ecri.Ecriture()
+    #Ecri.Ecriture()
 
-    Chimi.Modifications()
+    Chimi.LEET()
+    In = Chimi.Infinity()
+    Ecri.Ecriture(In)
 
 if __name__ == "__main__" :
     LE_PATRON()

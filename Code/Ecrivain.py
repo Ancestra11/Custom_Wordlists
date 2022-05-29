@@ -18,10 +18,10 @@ class Ecrivain() :
                 self.Arret(self.confirm)
 
     def Arret(self, confirm) :
-        SaisieUtilisateur = True
+        BonneSaisieUtilisateur = False
 
-        while SaisieUtilisateur :
-            SaisieUtilisateur = False
+        while not BonneSaisieUtilisateur :
+            BonneSaisieUtilisateur = True
             if self.confirm.upper() == 'S' :
                 self.potentiel.pop()
                 self.continuer = False
@@ -30,11 +30,11 @@ class Ecrivain() :
             elif self.confirm.upper() == 'R' :
                 self.potentiel.pop()
             else :
-                SaisieUtilisateur = True
+                BonneSaisieUtilisateur = False
                 self.confirm = input("S = Stop, A = Ajout, R = Retour : ")
         return self.continuer
         
-    def Ecriture(self) :
+    def Ecriture(self, *listes) :
         print("\nNom par défaut = 'Exemple.txt' ") 
         NomFichier = input("Donner un autre nom au fichier ? : ")
 
@@ -42,7 +42,7 @@ class Ecrivain() :
             NomFichier = "Exemple.txt"
 
         with open('../' + NomFichier, 'w') as Fichier :
-            for items in self.potentiel :
+            for items in self.potentiel:#, *listes :
                 Fichier.write('%s\n' %items)
 
     def getPotentiel(self) :
@@ -50,3 +50,4 @@ class Ecrivain() :
 
     def getConfirm(self) :
         return self.confirm
+
